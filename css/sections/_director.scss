@@ -1,0 +1,52 @@
+/*--------------------------------
+director
+--------------------------------*/
+.director {
+  padding: 130px 0 290px;
+  @include sp {
+    padding: 60px (20/$sp-w)*100vw 40px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: (48/$pc)*100vw;
+    font-weight: bold;
+    @include sp {
+      font-size: 32px;
+    }
+  }
+  &__img {
+    width: (148/$pc)*100vw;
+    margin: 0 auto 100px;
+    @include sp {
+      width: (85/$sp-w)*100vw;
+      margin: 0 auto 40px;
+    }
+  }
+  &-media {
+    display: flex;
+    justify-content: space-between;
+    width: (787/$pc)*100vw;
+    margin: 0 auto;
+    @include sp {
+      display: block;
+      width: auto;
+    }
+    &__img {
+      width: (288/$pc)*100vw;
+    }
+    &__lead {
+      width: (419/$pc)*100vw;
+      @include sp {
+        width: auto;
+      }
+    }
+    &__text {
+      margin-bottom: 30px;
+      line-height: (29/20);
+      @include sp {
+        font-size: 20px;
+      }
+    }
+  }
+}

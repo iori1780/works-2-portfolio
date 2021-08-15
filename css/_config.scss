@@ -1,0 +1,74 @@
+/*-----------------
+変数
+-----------------*/
+
+// カラー設定
+$color-black: #000000;
+
+$color-black-2: #2c2c2c;
+
+$color-black-3: #080808;
+
+$color-black-4: #1f1f1f;
+
+$color-black-5: #3c3c3c;
+
+$color-black-6: #050505;
+
+$color-black-7: #0b0b0b;
+
+$color-white: #fff;
+
+$color-white-2: #fafbff;
+
+$color-gray: #707070;
+
+$color-gray-2: #2b2b2b;
+
+$color-gray-3: #efefef;
+
+$color-blue: #2852ab;
+
+$color-blue-2: #2d5aa9;
+
+$color-blue-3: #E8EDFC;
+
+$color-blue-4: #264ea4;
+
+$color-blue-5: #fafbff;
+
+$color-red: #eb7f7f;
+
+$color-red-2: #e66969;
+
+//フォント
+$notosans: "Noto Sans JP";
+
+$poppins: "Poppins";
+
+$oswald: "Oswald";
+
+
+/*-----------------
+レスポンシブ
+-----------------*/
+
+// アートボートのPCサイズ
+$pc: 1280;
+
+//あーとボードのSPサイズ
+$sp-w: 375;
+//ブレイクポイント
+$sp: 600px;
+
+//スマホ
+@mixin sp {
+  @media screen and(max-width: $sp) {
+    @content;
+  }
+}
+@mixin pc {
+  @media screen and(max-width: $pc) {
+    @content;
+  }
+}

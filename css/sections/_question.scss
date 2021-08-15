@@ -1,0 +1,142 @@
+/*--------------------------------
+question
+--------------------------------*/
+.question {
+  padding: 150px 0;
+  background-color: $color-blue-5;
+  padding: 80px 0;
+  @include sp {
+    padding: 60px 0;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: bold;
+    @include sp {
+      font-size: 32px;
+    }
+  }
+  &__img  {
+    margin: 0 auto;
+    width: 148px;
+    @include sp {
+      width: 85px;
+    }
+  }
+}
+.accordion {
+  margin-top: 90px;
+  @include sp {
+    margin-top: 30px;
+  }
+  &__item {
+    border-bottom: 1px dashed $color-gray;
+    position: relative;
+    cursor: pointer;
+  }
+  &__term {
+    margin: 20px 0 20px;
+    padding-right: 60px;
+    line-height: (29/20);
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include sp {
+      margin: 10px 0;
+      padding-right: 30px;
+      font-size: 14px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-top: 3px solid #000;
+      border-right: 3px solid #000;
+      position: absolute;
+      top: 20%;
+      right: 40px;
+      transform: rotate(135deg); 
+      -webkit-transform: rotate(135deg);
+      transition: all 0.2s ease-in-out;
+      @include sp {
+        right: 20px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &.on::after {
+      top: 54%;
+      right: 40px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      @include sp {
+        right: 25px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &-icon {
+      flex-basis: 60px;
+      flex-shrink: 0;
+      height: 60px;
+      margin-right: 20px;
+      text-align: center;
+      font-size: 2.4rem;
+      color: $color-white;
+      line-height: 50px;
+      text-transform: uppercase;
+      background-color: $color-blue;
+      border-radius: 50%;
+      border: 3px solid $color-black;
+      @include sp {
+        flex-basis: 34px;
+        height: 34px;
+        font-size: 14px;
+        line-height: 28px;
+        border: 2px solid $color-black;
+      }
+    }
+  }
+  &__content {
+    display: none;
+  }
+  &__description {
+    margin-bottom: 20px;
+    padding-right: 60px;
+    line-height: (29/20);
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include sp {
+      margin-bottom: 10px;
+      padding-right: 30px;
+      font-size: 14px;
+    }
+    &-icon {
+      flex-basis: 60px;
+      flex-shrink: 0;
+      height: 60px;
+      margin-right: 20px;
+      text-align: center;
+      font-size: 2.4rem;
+      color: $color-white;
+      line-height: 50px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      background-color: $color-red-2;
+      border-radius: 50%;
+      border: 3px solid $color-black;
+      @include sp {
+        flex-basis: 34px;
+        height: 34px;
+        font-size: 14px;
+        line-height: 28px;
+        border: 2px solid $color-black;
+      }
+    }
+  }
+}

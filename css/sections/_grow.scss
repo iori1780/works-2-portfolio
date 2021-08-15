@@ -1,0 +1,256 @@
+/*--------------------------------
+grow
+--------------------------------*/
+.grow {
+  padding-top: 185px;
+  background: linear-gradient(0deg, transparent 29px, $color-gray 30px), linear-gradient(90deg, transparent 29px, $color-gray 30px);
+  background-size: 30px 30px;
+  @include sp {
+    padding-top: 35px;
+  }
+  &-problem {
+    &__title {
+      margin-bottom: 56px;
+      text-align: center;
+      font-size: (48/$pc)*100vw;
+      font-weight: bold;
+      line-height: (70/48);
+      @include sp {
+        margin-bottom: 23px;
+        font-size: (19/$sp-w)*100vw;
+      }
+    }
+    &__question {
+      width: fit-content;
+      margin: 0 auto 66px;
+      padding: 15px 140px;
+      font-size: (28/$pc)*100vw;
+      color: $color-blue;
+      font-weight: bold;
+      background-color: $color-white;
+      border: 1px solid $color-gray;
+      border-radius: 31px;
+      @include sp {
+        margin-bottom: 35px;
+        padding: 20px 40px;
+        font-size: (16/$sp-w)*100vw;
+      }
+    }
+    &__list {
+      margin-bottom: 78px;
+      @include sp {
+        margin-bottom: 60px;
+      }
+    }
+    &__item {
+      margin-bottom: 45px;
+      padding-left: 50px;
+      font-size: (24/$pc)*100vw;
+      position: relative;
+      @include sp {
+        margin-bottom: 30px;
+        padding-left: 30px;
+        font-size: 10px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/icon-1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        @include sp {
+          left: 5px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        background-image: url(../../images/icon-2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        @include sp {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__bottom {
+      margin-bottom: -(52/$pc)*100vw;
+      text-align: center;
+      font-size: (48/$pc)*100vw;
+      font-weight: bold;
+      line-height: (70/48);
+      @include sp {
+        margin-bottom: (30/$sp-w)*100vw;
+        font-size: (38/$sp-w)*100vw;
+      }
+    }
+  }
+  &-answer {
+    padding: 170px 0 100px;
+    text-align: center;
+    @include sp {
+      padding: 50px (20/$sp-w)*100vw 30px;
+    }
+    &__title {
+      width: fit-content;
+      margin: 0 auto 70px;
+      font-size: (38/$pc)*100vw;
+      font-weight: bold;
+      position: relative;
+      @include sp {
+        margin-bottom: 40px;
+        font-size: 12px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: (100/$pc)*100vw;
+        height: (6/$pc)*100vw;
+        border-radius: 5px;
+        background-color: $color-white;
+        position: absolute;
+        top: 20px;
+        left: -100px;
+        transform: rotate(60deg);
+        @include sp {
+          display: none;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: (100/$pc)*100vw;
+        height: (6/$pc)*100vw;
+        border-radius: 5px;
+        background-color: $color-white;
+        position: absolute;
+        top: 20px;
+        right: -100px;
+        transform: rotate(-60deg);
+        @include sp {
+          display: none;
+        }
+      }
+    }
+    &__logo {
+      margin-bottom: 24px;
+      font-family: $poppins;
+      font-size: (100/$pc)*100vw;
+      color: $color-blue;
+      text-transform: uppercase;
+      @include sp {
+        margin-bottom: 10px;
+        font-size: 80px;
+      }
+    }
+    &__sub-text {
+      margin-bottom: 75px;
+      font-size: 1.6rem;
+      color: $color-black-3;
+      @include sp {
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+    }
+    &__question {
+      width: fit-content;
+      margin: 0 auto 46px;
+      padding: 10px 60px;
+      font-size: 2.8rem;
+      color: $color-blue;
+      font-weight: bold;
+      background-color: $color-white;
+      border-radius: 31px;
+      @include sp {
+        margin-bottom: 26px;
+        padding: 20px 40px;
+        font-size: 16px;
+      }
+    }
+    &__lead {
+      margin-bottom: 30px;
+    }
+    &__text {
+      text-align: left;
+      font-size: (24/$pc)*100vw;
+      line-height: (46/24);
+      @include sp {
+        margin-bottom: 30px;
+        font-size: 12.5px;
+        line-height: (26/12.5);
+      }
+    }
+    &-bg {
+      background-color: $color-blue-3;
+    }
+    &__movies {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__movie {
+      position: relative;
+      width: (488/$pc)*100vw;
+      height: (315/$pc)*100vw;
+      @include sp {
+        width: 100%;
+        height: auto;
+      }
+      &-triangle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 54px;
+        @include sp {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+.step-arrow {
+  padding-top: calc(10vw);  
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10vw solid $color-blue-3;
+    left: 0;
+    border-right: 50vw solid transparent;
+    @include pc {
+      border-right: 640px solid transparent;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10vw solid $color-blue-3;
+    right: 0;
+    border-left: 50vw solid transparent;
+    @include pc {
+      border-left: 640px solid transparent;
+    }
+  }
+}

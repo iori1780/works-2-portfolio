@@ -1,0 +1,157 @@
+/*--------------------------------
+feature
+--------------------------------*/
+.feature {
+  position: relative;
+  margin-bottom: 120px;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+    height: 1300px;
+    background-color: $color-blue-5;
+    z-index: -1;
+  }
+  .dashed-border {
+    margin-bottom: 140px;
+    @include sp {
+      margin-bottom: 130px;
+    }
+  }
+  &-text-wrapper {
+    margin: 70px auto 90px;
+    padding: 0 90px;
+    @include sp {
+      margin-bottom: 70px;
+      padding: 0 (20/$sp-w)*100vw ;
+    }
+    &__main {
+      margin-bottom: 30px;
+      font-size: 3.2rem;
+      font-weight: bold;
+      line-height: 2;
+      border-bottom: 10px dashed $color-red-2;
+      @include sp {
+        padding-bottom: 20px;
+        font-size: 19px;
+        line-height: (29/20);
+        border-bottom: 8px dashed $color-red-2;
+      }
+    }
+    &__sub {
+      line-height: (32/20);
+    }
+  }
+  &__logo {
+    margin-bottom: 80px;
+    font-family: $poppins;
+    text-align: center;
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: $color-blue;
+    @include sp {
+      font-size: 80px;
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 140px;
+    grid-row-gap: 120px;
+    //タイトルの背後枠を背後へ配置する為の措置
+    position: relative;
+    z-index: 1;
+    @include sp {
+      display: block ;
+    }
+    &__item {
+      @include sp {
+        margin-bottom: 110px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__title {
+      margin-right: 5px;
+      margin-bottom: 40px;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 2.8rem;
+      color: $color-white;
+      font-weight: bold;
+      background-color: $color-blue;
+      position: relative;
+      @include sp {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color-black;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: -1;
+      }
+    }
+    &__text {
+      line-height: (29/20);
+      @include sp {
+        font-size: 14px;
+        line-height: (24/14);
+      }
+    }
+  }
+}
+.balloon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px $color-black;
+  background-color: $color-red-2;
+  border: 1px solid $color-black;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  @include sp {
+    top: -(60/$sp-w)*100vw;
+    font-size: 16px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 45px;
+    top: 53px;
+    border-right: 10px solid $color-red-2;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform: rotate(-135deg);
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 45px;
+    top: 53px;
+    border-right: 11px solid $color-black;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transform: rotate(-135deg);
+  }
+}

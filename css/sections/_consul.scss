@@ -1,0 +1,46 @@
+/*--------------------------------
+consul
+--------------------------------*/
+.consul {
+  padding: 53px 0;
+  background-color: $color-blue-3;
+  @include sp {
+    padding: 53px (20/$sp-w)*100vw;
+  }
+  &__contents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0;
+    background-color: $color-white;
+    border-radius: 20px;
+    @include sp {
+      flex-direction: column;
+      padding: 30px 0;
+    }
+  }
+  &__lead {
+    text-align: center;
+    @include sp {
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    font-size: 2.8rem;
+    line-height: (40/28);
+    @include sp {
+      font-size: 20px;
+    }
+  }
+  &__link {
+    position: relative;
+    padding: 30px 100px;
+    font-size: 2.8rem;
+    color: $color-white;
+    transition: .3s;
+    z-index: 0;
+    @include sp {
+      padding: 20px 60px;
+    }
+  }
+}

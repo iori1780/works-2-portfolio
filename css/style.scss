@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+//リセットcssの読み込み
+@import "reset";
+//変数、レスポンシブ等の読み込み
+@import "config";
+//html、body等の基本設定の読み込み
+@import "base";
+
+//各セクションの読み込み
+@import "sections/header";
+@import "sections/catch";
+@import "sections/consul";
+@import "sections/grow";
+@import "sections/learn";
+@import "sections/curriculum";
+@import "sections/research";
+@import "sections/feature";
+@import "sections/compare";
+@import "sections/question";
+@import "sections/director";

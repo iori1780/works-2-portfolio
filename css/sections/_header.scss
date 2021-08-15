@@ -1,0 +1,160 @@
+/*--------------------------------
+header
+--------------------------------*/
+.header {
+  padding-bottom: 80px;
+  background-image: url(../../images/kv.jpg);
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: right -50% top 10%;
+  @include sp {
+    padding-bottom: 40px;
+    background-size: 110% auto;
+    background-position: right 120% bottom 0;
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 33px 0 39px;
+    margin: 0 auto;
+    @include sp {
+      padding: 17px 20px 0 26px;
+    }
+  }
+  &-logo {
+    &__text {
+      margin-bottom: 11px;
+      font-family: "メイリオ";
+      font-size: 1.4rem;
+    }
+    &__img {
+      padding: 12px 53px;
+      font-family: $poppins;
+      text-align: center;
+      font-size: 2.4rem;
+      color: $color-blue;
+      text-transform: uppercase;
+      border: 1px solid $color-gray;
+      @include sp {
+        padding: 0;
+        font-size: 24px;
+        border: none;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    padding: 28px;
+    font-size: 1.8rem;
+    color: $color-white;
+    text-shadow: 2px 2px $color-black;
+    transition: .3s;
+    z-index: 0;
+    @include sp {
+      padding: 10px 35px;
+    }
+    &-icon {
+      display: inline-block;
+      width: 23px;
+      height: 17px;
+      margin-left: 10px;
+      background-color: $color-white;
+      border: 1px solid $color-black;
+      position: relative;
+      top: 2px;
+      @include sp {
+        margin-left: 0;
+        top: 0;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        transform: rotate(-135deg);
+        position: absolute;
+        top: -7px;
+        left: 3px;
+      } 
+    }
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    @include sp {
+      flex-direction: column;
+      padding-top: 30px;
+    }
+  }
+  &-lead {
+    padding-bottom: 100px;
+    @include sp {
+      padding-bottom: 60px;
+    }
+    &__title {
+      margin-bottom: 62px;
+      font-size: 6rem;
+      line-height: (87/60);
+      color: $color-black-2;
+      @include sp {
+        margin-bottom: 8px;
+        font-size: 38px;
+      }
+    }
+    &__text {
+      font-size: 2.4rem;
+      line-height: (35/24);
+      @include sp {
+        font-size: 12px;
+      }
+    }
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding-bottom: 50px;
+    @include sp {
+      align-self: center;
+      padding-bottom: 0
+    }
+    &__item {
+      width: 157px;
+      height: 157px;
+      margin-right: 10px;
+      padding: 30px 30px 0;
+      text-align: center;
+      background-color: $color-red;
+      border-radius: 50%;
+      @include sp {
+        width: (103/$sp-w)*100vw;
+        height: (103/$sp-w)*100vw;
+        padding: (20/$sp-w)*100vw;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__title {
+      margin-bottom: 10px;
+      font-size: 2.7rem;
+      color: $color-blue;
+      @include sp {
+        font-size: (17/$sp-w)*100vw;
+      }
+    }
+    &__text {
+      font-size: 1.6rem;
+      color: $color-white;
+      @include sp {
+        font-size: (12/$sp-w)*100vw;
+      }
+    }
+  }
+}
+
+
+

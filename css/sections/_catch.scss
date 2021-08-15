@@ -1,0 +1,53 @@
+/*--------------------------------
+catch
+--------------------------------*/
+.catch {
+  display: flex;
+  @include sp {
+    flex-direction: column;
+  }
+  &-lead {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-blue; 
+    &__title {
+      font-size: 4.2rem;
+      color: $color-white;
+      -webkit-text-stroke: 1px $color-black;
+      @include sp {
+        padding: 20px 0 30px;
+        text-align: center;
+        font-size: 28px;
+        line-height: (40/28);
+        -webkit-text-stroke: initial;
+      }
+    }
+  }
+  &-img {
+    flex-grow: 1;
+    text-align: center;
+    border: 8px solid $color-black-2;
+    &__logo {
+      font-family: $poppins;
+      font-size: 10rem;
+      color: $color-blue;
+      text-transform: uppercase;
+      background-color: $color-white;
+      @include sp {
+        padding-top: 10px;
+        font-size: (100/$sp-w)*100vw;
+      }
+    }
+    &__text {
+      padding: 20px;
+      color: $color-white;
+      font-weight: bold;
+      background-color: $color-black-2;
+      @include sp {
+        font-size: (16/$sp-w)*100vw;
+      }
+    }
+  }
+}
